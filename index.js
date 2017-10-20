@@ -7,7 +7,7 @@ const fs = require('fs');
 try {
   fs.accessSync(path.resolve('build/'));
 } catch (e) {
-  console.log("> 'build/' folder doesn't exist. Build with yarn build")
+  console.log("> 'build/' folder doesn't exist.")
   process.exit(1);
 }
 
@@ -27,5 +27,5 @@ app.get('/*', (req, res) => {
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log('App is listening on port:', PORT)
+  console.log('> Build is serving on port:', PORT)
 })
